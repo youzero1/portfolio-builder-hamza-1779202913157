@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
+import Avatar from '@/components/Avatar';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -17,10 +18,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-[var(--color-bg)]/70 border-b border-[var(--color-border)]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-2)] flex items-center justify-center text-black">
-            <Sparkles size={16} />
-          </span>
+        <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
+          <Avatar size={36} ring={false} />
           <span className="font-semibold tracking-tight">Alex Morgan</span>
         </Link>
 
@@ -53,7 +52,7 @@ export default function Header() {
         <button
           aria-label="Toggle menu"
           className="md:hidden p-2 rounded-md hover:bg-[var(--color-card)] transition"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((v: boolean) => !v)}
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>

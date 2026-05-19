@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Sparkles, Star } from 'lucide-react';
 import Section from '@/components/Section';
 import ProjectCard from '@/components/ProjectCard';
+import Avatar from '@/components/Avatar';
 import { projects, stack, experiences } from '@/lib/data';
 
 export default function Home() {
@@ -16,9 +17,12 @@ export default function Home() {
         <div className="absolute -bottom-40 right-0 w-[28rem] h-[28rem] rounded-full bg-[var(--color-accent-2)]/10 blur-3xl animate-float pointer-events-none" />
 
         <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-32">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-card)]/60 backdrop-blur text-xs text-[var(--color-muted)] mb-8">
-            <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
-            Available for new projects · Q3 2025
+          <div className="flex items-center gap-4 mb-8">
+            <Avatar size={56} status="online" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--color-border)] bg-[var(--color-card)]/60 backdrop-blur text-xs text-[var(--color-muted)]">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse" />
+              Available for new projects · Q3 2025
+            </div>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.05] max-w-4xl">

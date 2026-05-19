@@ -1,5 +1,6 @@
 import { Coffee, Globe, Heart, Zap } from 'lucide-react';
 import Section from '@/components/Section';
+import Avatar from '@/components/Avatar';
 import { skillGroups, experiences } from '@/lib/data';
 
 export default function About() {
@@ -12,6 +13,13 @@ export default function About() {
       >
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div className="space-y-4 text-[var(--color-muted)] leading-relaxed">
+            <div className="flex items-center gap-4 mb-6">
+              <Avatar size={72} status="online" />
+              <div>
+                <div className="text-[var(--color-text)] font-semibold">Alex Morgan</div>
+                <div className="text-sm">Product Engineer · Lisbon, PT</div>
+              </div>
+            </div>
             <p>
               I grew up tinkering with PCs and writing small games in BASIC. Today I focus on
               building polished web and mobile experiences — with a soft spot for typography,
