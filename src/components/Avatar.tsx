@@ -10,7 +10,7 @@ type AvatarProps = {
 };
 
 const AVATAR_URL =
-  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400&q=80&auto=format&fit=crop&crop=faces';
+  'https://lftz3v8pir.ufs.sh/f/NoZTNYowGyU83YkbCmEyzZXMRm0xS7Y8sJrLifphvuCnPa9c';
 
 export default function Avatar({
   src = AVATAR_URL,
